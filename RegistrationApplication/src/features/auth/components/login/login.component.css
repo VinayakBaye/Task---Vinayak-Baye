@@ -1,0 +1,27 @@
+.custom-card {
+  width: 70%;
+  height: 270px;
+  margin: 18px auto;
+}
+
+.card-body {
+  margin-top: 20px;
+}
+
+.cardHeader {
+  margin-top: 60px;
+}
+
+.loginLabel {
+  font-size: 18px;
+}
+
+.passwordLabel {
+  font-size: 17px;
+}
+
+.loginButton {
+  text-align: right;
+  height: 50px;
+  margin-top: 20px;
+}

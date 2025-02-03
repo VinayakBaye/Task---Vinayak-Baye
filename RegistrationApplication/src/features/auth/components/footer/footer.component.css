@@ -1,0 +1,18 @@
+footer {
+  background-color: gray;
+  color: white;
+  padding: 15px 0;
+  position: relative;
+  width: 100%;
+  margin-top: 150px;
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}

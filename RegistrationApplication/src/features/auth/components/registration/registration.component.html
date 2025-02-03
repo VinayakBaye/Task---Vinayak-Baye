@@ -1,0 +1,352 @@
+<!-- <div class="container">
+    <div class="card custom-card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h4>Please fill in the following required information</h4>
+                </div>
+                <div class="col-lg-6">
+                    <div id="logoutDiv" class="logoutDiv">
+                        <button type="button" class="btn btn-danger btn-lg" (click)="onLogout()">Logout</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-body">
+            <form [formGroup]="registrationForm">
+                <div id="firstNameDiv">
+                    <div class="row" class="firstNameField">
+                        <label class="fieldLable" for="firstName">First Name:</label>
+                        <input type="text" id="firstName" formControlName="firstName"
+                            class="form-control fieldLable fieldWidth" />
+                        <div
+                            *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+                            <span class="errorText" *ngIf="registrationForm.get('firstName')?.errors?.required">First
+                                Name is required.</span>
+                        </div>
+                        <div
+                            *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+                            <span class="errorText" *ngIf="registrationForm.get('firstName')?.errors?.minlength">First
+                                Name must be at least 3 character.</span>
+                        </div>
+                        <div
+                            *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+                            <span class="errorText" *ngIf="registrationForm.get('firstName')?.errors?.pattern">First
+                                Name can only contain letters and spaces.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="lastNameDiv">
+                    <div class="row" class="fieldParentDiv">
+                        <label class="fieldLable" for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" formControlName="lastName"
+                            class="form-control fieldWidth fieldLable" />
+                        <div
+                            *ngIf="registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
+                            <span class="errorText" *ngIf="registrationForm.get('lastName')?.errors?.required">Last Name
+                                is required.</span>
+                        </div>
+                        <div
+                            *ngIf="registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
+                            <span class="errorText" *ngIf="registrationForm.get('lastName')?.errors?.minlength">Last
+                                Name must be at least 3 character.</span>
+                        </div>
+                        <div
+                            *ngIf="registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
+                            <span class="errorText" *ngIf="registrationForm.get('lastName')?.errors?.pattern">Last Name
+                                can only contain letters and spaces.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="stateDiv">
+                    <div class="row" class="fieldParentDiv">
+                        <label class="fieldLable" for="state">State:</label>
+                        <select id="state" class="fieldWidth fieldLable" class="form-control" formControlName="state">
+                            <option class="fieldLable" *ngFor="let option of stateDropdownOptions"
+                                [value]="option.value">
+                                {{ option.label }}
+                            </option>
+                        </select>
+                    </div>
+                    <div
+                        *ngIf="registrationForm.get('state')?.invalid && (registrationForm.get('state')?.dirty || registrationForm.get('state')?.touched)">
+                        <span class="errorText" *ngIf="registrationForm.get('state')?.errors?.required">State is
+                            required.</span>
+                    </div>
+                </div>
+
+                <div id="infoDiv" class="infoDiv">
+                    <div class="row" class="fieldParentDiv">
+                        <label class="fieldLable">please provide your email address.</label> <br />
+                        <label class="fieldLable">All meetings correspondence will be sent via
+                            email.</label><br />
+                    </div>
+                </div>
+
+                <div id="emailDiv">
+                    <div class="row" class="fieldParentDiv">
+                        <label class="fieldLable" for="email">Email:</label>
+                        <input type="text" id="email" formControlName="email"
+                            class="form-control  fieldWidth fieldLable" />
+                        <div
+                            *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+                            <span class="errorText" *ngIf="registrationForm.get('email')?.errors?.required">email is
+                                required.</span>
+                        </div>
+                        <div
+                            *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+                            <span class="errorText" *ngIf="registrationForm.get('email')?.errors?.email">Please enter
+                                valid email Id.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="confirmEmailDiv">
+                    <div class="row" class="fieldParentDiv">
+                        <label class="fieldLable" for="confirmEmail">Confirm Email:</label>
+                        <input type="text" id="confirmEmail" formControlName="confirmEmail" [disabled]="!isEmailValid"
+                            class="form-control  fieldWidth fieldLable" />
+                       --> <!-- <div
+                            *ngIf="registrationForm.get('confirmEmail')?.invalid && (registrationForm.get('confirmEmail')?.dirty || registrationForm.get('confirmEmail')?.touched)">
+                            <span class="errorText"
+                                *ngIf="registrationForm.get('confirmEmail')?.errors?.required">Confirm Email is
+                                required.</span>
+                        </div> --> <!--
+                        <div
+                            *ngIf="registrationForm.get('confirmEmail')?.invalid && (registrationForm.get('confirmEmail')?.dirty || registrationForm.get('confirmEmail')?.touched)">
+                            <span class="errorText"
+                                *ngIf="registrationForm.get('confirmEmail')?.errors?.confirmEmail">Please enter valid
+                                email Id.</span>
+                        </div>
+                        <div
+                            *ngIf="registrationForm.get('confirmEmail')?.invalid && (registrationForm.get('confirmEmail')?.dirty || registrationForm.get('confirmEmail')?.touched)">
+                            <span class="errorText"
+                                *ngIf="registrationForm.get('confirmEmail')?.errors?.emailMismatch">Confirm email Id
+                                must match with email.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="subscriberDiv">
+                    <div class="" class="fieldParentDiv">
+                        <input type="checkbox" id="subscribeToNewsLetter" formControlName="subscribeToNewsLetter" />
+                        <label class="subscribeToNewsLetterField" for="subscribeToNewsLetter">Subscribe to
+                            NewsLetter</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer" class="footer">
+            <button type="button" class="btn btn-primary btn-lg" [disabled]="!registrationForm.valid"
+                (click)="onSubmit()">Continue</button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="showMessage">
+    <app-info-modal [message]="responseMessage"></app-info-modal>
+</div> -->
+
+<div class="row">
+    <fieldset *ngIf="step == 1 || step == 2">
+        <div class="panel panel-primary headerText">
+            <div class="panel-body">
+                <h2>Contact Information</h2>
+            </div>
+        </div>
+
+    </fieldset>
+    <fieldset *ngIf="step == 3">
+        <div class="panel panel-primary headerText">
+            <div class="panel-body">
+                <h2>Complete</h2>
+            </div>
+        </div>
+    </fieldset>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <ul id="progressbar">
+            <li [ngClass]="step==1 ? 'active ' : 'inactive'">Select</li>
+            <li [ngClass]="step==2 || step==3 ? 'active' : 'inactive'">Submit Info</li>
+            <li [ngClass]="step==3 ? 'active' : 'inactive'">Complete</li>
+        </ul>
+
+        <fieldset *ngIf="step == 1 || step == 2">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h4>Please fill in the following required information</h4>
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="logoutDiv" class="logoutDiv">
+                                <button type="button" class="btn btn-danger btn-lg" (click)="onLogout()">Logout</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <form [formGroup]="registrationForm">
+                        <div id="firstNameDiv">
+                            <div class="row" class="firstNameField">
+                                <label class="fieldLable" for="firstName">First Name:</label>
+                                <input type="text" id="firstName" formControlName="firstName"
+                                    class="form-control fieldLable fieldWidth" />
+                                <div
+                                    *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+                                    <span class="errorText"
+                                        *ngIf="registrationForm.get('firstName')?.errors?.required">First
+                                        Name is required.</span>
+                                </div>
+                                <div
+                                    *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+                                    <span class="errorText"
+                                        *ngIf="registrationForm.get('firstName')?.errors?.minlength">First
+                                        Name must be at least 3 character.</span>
+                                </div>
+                                <div
+                                    *ngIf="registrationForm.get('firstName')?.invalid && (registrationForm.get('firstName')?.dirty || registrationForm.get('firstName')?.touched)">
+                                    <span class="errorText"
+                                        *ngIf="registrationForm.get('firstName')?.errors?.pattern">First
+                                        Name can only contain letters and spaces.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="lastNameDiv">
+                            <div class="row" class="fieldParentDiv">
+                                <label class="fieldLable" for="lastName">Last Name:</label>
+                                <input type="text" id="lastName" formControlName="lastName"
+                                    class="form-control fieldWidth fieldLable" />
+                                <div
+                                    *ngIf="registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
+                                    <span class="errorText"
+                                        *ngIf="registrationForm.get('lastName')?.errors?.required">Last Name
+                                        is required.</span>
+                                </div>
+                                <div
+                                    *ngIf="registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
+                                    <span class="errorText"
+                                        *ngIf="registrationForm.get('lastName')?.errors?.minlength">Last
+                                        Name must be at least 3 character.</span>
+                                </div>
+                                <div
+                                    *ngIf="registrationForm.get('lastName')?.invalid && (registrationForm.get('lastName')?.dirty || registrationForm.get('lastName')?.touched)">
+                                    <span class="errorText"
+                                        *ngIf="registrationForm.get('lastName')?.errors?.pattern">Last Name
+                                        can only contain letters and spaces.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="stateDiv">
+                            <div class="row" class="fieldParentDiv">
+                                <label class="fieldLable" for="state">State:</label>
+                                <select id="state" class="fieldWidth fieldLable" class="form-control"
+                                    formControlName="state">
+                                    <option class="fieldLable" *ngFor="let option of stateDropdownOptions"
+                                        [value]="option.value">
+                                        {{ option.label }}
+                                    </option>
+                                </select>
+                            </div>
+                            <div
+                                *ngIf="registrationForm.get('state')?.invalid && (registrationForm.get('state')?.dirty || registrationForm.get('state')?.touched)">
+                                <span class="errorText" *ngIf="registrationForm.get('state')?.errors?.required">State is
+                                    required.</span>
+                            </div>
+                        </div>
+
+                        <div id="infoDiv" class="infoDiv">
+                            <div class="row" class="fieldParentDiv">
+                                <label class="fieldLable">Please provide your email address.</label> <br />
+                                <label class="fieldLable">All meetings correspondence will be sent via
+                                    email.</label><br />
+                            </div>
+                        </div>
+
+                        <div id="emailDiv">
+                            <div class="row" class="fieldParentDiv">
+                                <label class="fieldLable" for="email">Email:</label>
+                                <input type="text" id="email" formControlName="email"
+                                    class="form-control  fieldWidth fieldLable" />
+                                <div
+                                    *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+                                    <span class="errorText"
+                                        *ngIf="registrationForm.get('email')?.errors?.required">Email is
+                                        required.</span>
+                                </div>
+                                <div
+                                    *ngIf="registrationForm.get('email')?.invalid && (registrationForm.get('email')?.dirty || registrationForm.get('email')?.touched)">
+                                    <span class="errorText" *ngIf="registrationForm.get('email')?.errors?.email">Please
+                                        enter
+                                        valid email Id.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="confirmEmailDiv">
+                            <div class="row" class="fieldParentDiv">
+                                <label class="fieldLable" for="confirmEmail">Confirm Email:</label>
+                                <input type="text" id="confirmEmail" formControlName="confirmEmail"
+                                    class="form-control  fieldWidth fieldLable" />
+                                <div
+                                    *ngIf="registrationForm.get('confirmEmail')?.invalid && (registrationForm.get('confirmEmail')?.dirty || registrationForm.get('confirmEmail')?.touched)">
+                                    <span class="errorText"
+                                        *ngIf="registrationForm.get('confirmEmail')?.errors?.required">Confirm Email is
+                                        required.</span>
+                                </div>
+                                <div
+                                    *ngIf="registrationForm.get('confirmEmail')?.invalid && (registrationForm.get('confirmEmail')?.dirty || registrationForm.get('confirmEmail')?.touched)">
+                                    <span class="errorText"
+                                        *ngIf="registrationForm.get('confirmEmail')?.errors?.confirmEmail">Please enter
+                                        valid
+                                        email Id.</span>
+                                </div>
+                                <div
+                                    *ngIf="registrationForm.get('confirmEmail')?.invalid && (registrationForm.get('confirmEmail')?.dirty || registrationForm.get('confirmEmail')?.touched)">
+                                    <span class="errorText"
+                                        *ngIf="registrationForm.get('confirmEmail')?.errors?.emailMismatch">Confirm
+                                        email Id
+                                        must match with email.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="subscriberDiv">
+                            <div class="" class="fieldParentDiv">
+                                <input type="checkbox" id="subscribeToNewsLetter"
+                                    formControlName="subscribeToNewsLetter" />
+                                <label class="subscribeToNewsLetterField" for="subscribeToNewsLetter">Subscribe to
+                                    NewsLetter</label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="card-footer" class="footer">
+                        <button type="button" class="btn btn-primary btn-lg" [disabled]="!registrationForm.valid"
+                            (click)="onSubmit()">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset *ngIf="step == 3">
+            <div class="container successCard" id="successCardDiv">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3>Thank you for registering! </h3>
+                    </div>
+                    <div class="panel-body successModal">
+                        <h4>
+                            You should recieve a confirming email momentarily containing additional details.
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>

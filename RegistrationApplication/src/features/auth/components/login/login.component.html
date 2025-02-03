@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="panel panel-primary cardHeader">
+        <div class="panel-heading">
+            <h4>Login</h4>
+        </div>
+        <div class="panel-body">
+            <form [formGroup]="loginForm">
+                <div id="passwordField">
+                    <label class="loginLabel">
+                        Please enter the case sensitive password from your official invitation.
+                    </label><br /><br />
+                    <label class="passwordLabel" for="password">Password:</label>
+                    <input type="password" id="password" formControlName="password" class="form-control" />
+                    <div
+                        *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+                        <span class="errorText" *ngIf="loginForm.get('password')?.errors?.required">Password is
+                            required.</span>
+                    </div>
+                    <div
+                        *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)">
+                        <span class="errorText" *ngIf="loginForm.get('password')?.errors?.wrongPassword">Incorrect
+                            password, please enter valid password.</span>
+                    </div>
+                </div>
+            </form>
+            <div id="loginButton" class="loginButton">
+                <button type="button" class="btn btn-primary btn-lg" [disabled]="!loginForm.valid"
+                    (click)="onSubmit()">Login</button>
+            </div>
+        </div>
+
+    </div>
+</div>
